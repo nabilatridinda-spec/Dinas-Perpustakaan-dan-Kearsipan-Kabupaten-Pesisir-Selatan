@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Portal Perpustakaan Digital Dinas Kearsipan dan Perpustakaan Kabupaten Pesisir Selatan.">
+<title>Perpustakaan Digital Pesisir Selatan</title>
+<style>
+:root{--navy:#14213d;--navy2:#0b1328;--gold:#e6b65c;--cream:#f6f3ec;--ink:#202a3b;--muted:#687386;--white:#fff;--line:#e5e8ef;--teal:#2b8c86}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6fa;color:var(--ink);line-height:1.6}
+header{background:var(--navy);color:white;border-bottom:3px solid var(--gold);position:sticky;top:0;z-index:10}
+.nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:13px 22px;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;min-width:240px}.logo{width:48px;height:48px;border:2px solid var(--gold);border-radius:12px;display:grid;place-items:center;font-size:25px;background:#fff;color:var(--navy)}
+.brand strong{display:block;color:var(--gold);font-family:Georgia,serif;font-size:18px}.brand small{color:#d5dcec;font-size:11px}
+nav{display:flex;align-items:center;gap:5px;flex-wrap:wrap}nav a{color:#e6ebf5;text-decoration:none;padding:9px 12px;border-radius:7px;font-size:13px}nav a:hover,nav a.active{background:#2a3856;color:var(--gold)}
+.menu{display:none;background:transparent;color:white;border:1px solid #60708b;padding:8px 11px;border-radius:7px}
+main{max-width:1180px;margin:auto;padding:28px 22px}
+.hero{min-height:350px;border-radius:16px;overflow:hidden;position:relative;background:linear-gradient(115deg,rgba(8,20,43,.94),rgba(15,44,67,.68)),radial-gradient(circle at 80% 20%,#65a9a0 0 9%,transparent 10%),linear-gradient(135deg,#1a526b,#d2a45a);color:white;display:flex;align-items:center;padding:48px}
+.hero:after{content:"";position:absolute;right:-45px;bottom:-120px;width:460px;height:330px;border:2px solid rgba(255,255,255,.2);border-radius:50%;box-shadow:0 0 0 35px rgba(255,255,255,.05),0 0 0 75px rgba(255,255,255,.04)}
+.hero-content{max-width:660px;position:relative;z-index:1}.eyebrow{color:var(--gold);font-weight:bold;letter-spacing:2px;text-transform:uppercase;font-size:12px}.hero h1{font: bold clamp(30px,5vw,48px)/1.12 Georgia,serif;margin:12px 0}.hero p{color:#e1e8f2;max-width:590px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;padding:11px 17px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:13px;border:1px solid var(--gold);background:var(--gold);color:#17233b;cursor:pointer}.btn.secondary{background:transparent;color:white;border-color:#aebbd0}.btn:hover{filter:brightness(1.06)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0 34px}.stat{background:white;border:1px solid var(--line);border-radius:12px;padding:17px;box-shadow:0 4px 16px #14213d08}.stat b{font: bold 25px Georgia;color:var(--navy);display:block}.stat span{font-size:12px;color:var(--muted)}
+.section{margin:34px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:16px}.section h2{font: bold 27px Georgia;color:var(--navy);margin:0}.section-head p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:white;border:1px solid var(--line);border-radius:13px;padding:20px;box-shadow:0 5px 20px #14213d08}.card-icon{width:43px;height:43px;border-radius:11px;background:#f7edda;color:#93651c;display:grid;place-items:center;font-size:22px;margin-bottom:12px}.card h3{margin:0 0 6px;color:var(--navy);font: bold 18px Georgia}.card p{font-size:13px;color:var(--muted);margin:0 0 12px}.link{color:#247b79;text-decoration:none;font-size:13px;font-weight:bold}
+.searchbox{background:var(--navy);color:white;border-radius:15px;padding:25px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}.searchbox h2{font: bold 24px Georgia;margin:0 0 4px}.searchbox p{margin:0;color:#cbd5e5;font-size:13px}.search-form{display:flex;gap:8px}.search-form input{min-width:240px;padding:12px;border-radius:8px;border:1px solid #b8c3d5;font-size:14px}
+.books{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.book{background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden}.cover{height:150px;display:grid;place-items:center;text-align:center;padding:18px;color:white;font: bold 20px Georgia;background:linear-gradient(145deg,#23445b,#b58b4c)}.book:nth-child(2) .cover{background:linear-gradient(145deg,#1d625e,#d3a66b)}.book:nth-child(3) .cover{background:linear-gradient(145deg,#583c62,#b88b68)}.book:nth-child(4) .cover{background:linear-gradient(145deg,#344b75,#8da8a2)}.book-info{padding:13px}.book-info b{display:block;color:var(--navy);font-size:14px}.book-info small{color:var(--muted)}
+.notice{background:#fff8e9;border-left:4px solid var(--gold);padding:15px 18px;border-radius:8px;font-size:13px;color:#66502c}
+footer{background:var(--navy2);color:#d4dbea;margin-top:45px;padding:32px 22px}.foot{max-width:1180px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}.foot h3{color:var(--gold);font: bold 18px Georgia}.foot p,.foot a{font-size:12px;color:#c4cede}.foot a{display:block;text-decoration:none;margin:5px 0}
+.modal{display:none;position:fixed;inset:0;background:#081329bb;z-index:30;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.modal-box{background:white;border-radius:14px;padding:23px;max-width:520px;width:100%;position:relative}.modal-box h2{margin-top:0;color:var(--navy);font-family:Georgia}.close{position:absolute;right:14px;top:10px;border:0;background:none;font-size:24px;cursor:pointer}
+label{font-size:13px;font-weight:bold;display:block;margin:10px 0 5px}input,textarea,select{width:100%;padding:11px;border:1px solid #ccd3df;border-radius:7px;font:inherit}textarea{min-height:90px}
+.result{margin-top:12px;font-size:13px;color:var(--teal)}
+@media(max-width:800px){.nav{align-items:flex-start;flex-wrap:wrap}.menu{display:block;margin-left:auto}nav{display:none;width:100%;flex-direction:column;align-items:stretch}nav.open{display:flex}.hero{padding:30px 24px;min-height:330px}.stats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr 1fr}.books{grid-template-columns:repeat(2,1fr)}.searchbox{grid-template-columns:1fr}.search-form input{min-width:0;flex:1}.foot{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){main{padding:18px 14px}.grid{grid-template-columns:1fr}.books{grid-template-columns:1fr 1fr}.hero{padding:26px 20px}.stats{gap:9px}.stat{padding:13px}.section h2{font-size:23px}.search-form{flex-direction:column}.search-form input{width:100%}.foot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+ <div class="brand"><div class="logo">📚</div><div><strong>Perpustakaan Digital Pesisir Selatan</strong><small>Dinas Kearsipan dan Perpustakaan Kabupaten Pesisir Selatan</small></div></div>
+ <button class="menu" id="menuBtn">☰ Menu</button>
+ <nav id="nav"><a class="active" href="#beranda">Beranda</a><a href="#profil">Profil</a><a href="#layanan">Layanan</a><a href="#koleksi">Koleksi Digital</a><a href="#katalog">Cari Koleksi</a><a href="#kontak">Kontak</a></nav>
+</div></header>
+<main>
+<section class="hero" id="beranda"><div class="hero-content">
+ <div class="eyebrow">Ruang baca tanpa batas</div>
+ <h1>Jelajahi Pengetahuan,<br>Kenali Pesisir Selatan</h1>
+ <p>Selamat datang di portal Perpustakaan Digital Dinas Kearsipan dan Perpustakaan Kabupaten Pesisir Selatan. Temukan informasi, layanan, dan sumber bacaan untuk masyarakat.</p>
+ <div class="actions"><a class="btn" href="#katalog">Jelajahi Koleksi</a><a class="btn secondary" href="#layanan">Lihat Layanan</a></div>
+ </div></section>
+<div class="stats"><div class="stat"><b>24/7</b><span>Akses informasi daring</span></div><div class="stat"><b>Digital</b><span>Katalog dan informasi koleksi</span></div><div class="stat"><b>Publik</b><span>Layanan untuk masyarakat</span></div><div class="stat"><b>Pessel</b><span>Literasi lokal dan budaya</span></div></div>
+<section class="section" id="profil"><div class="section-head"><div><h2>Tentang Perpustakaan</h2><p>
+
+</p></div></div>
+<div class="card"><h3>Membangun masyarakat yang gemar membaca dan melek informasi</h3><p>Dinas Kearsipan dan Perpustakaan Kabupaten Pesisir Selatan hadir untuk mendukung kebutuhan informasi, pendidikan, penelitian, dan pengembangan budaya baca masyarakat. Portal ini menjadi pintu awal untuk mengenal layanan perpustakaan, menelusuri informasi koleksi, serta memperoleh kabar kegiatan literasi.</p><div class="notice"></div></div></section>
+<section class="section" id="layanan"><div class="section-head"><div><h2>Layanan Perpustakaan</h2><p>Fitur layanan yang dapat dikembangkan untuk kebutuhan pemustaka.</p></div></div>
+<div class="grid">
+<div class="card"><div class="card-icon">🔎</div><h3>Penelusuran Katalog</h3><p>Temukan judul dan informasi koleksi melalui pencarian katalog sederhana.</p><a class="link" href="#katalog">Cari koleksi →</a></div>
+<div class="card"><div class="card-icon">📖</div><h3>Baca Digital</h3><p>Ruang menuju koleksi elektronik, e-book, dan bahan bacaan digital yang disediakan perpustakaan.</p><a class="link" href="#koleksi">Lihat koleksi →</a></div>
+<div class="card"><div class="card-icon">🗓️</div><h3>Agenda Literasi</h3><p>Informasi kegiatan membaca, pelatihan, kunjungan, dan program literasi masyarakat.</p><a class="link" href="#agenda">Lihat agenda →</a></div>
+<div class="card"><div class="card-icon">🧭</div><h3>Panduan Pemustaka</h3><p>Petunjuk dasar penggunaan layanan, tata tertib, dan cara mendapatkan bantuan pustakawan.</p><a class="link" href="#panduan">Baca panduan →</a></div>
+<div class="card"><div class="card-icon">💬</div><h3>Saran dan Usulan</h3><p>Sampaikan masukan untuk peningkatan koleksi dan kualitas layanan perpustakaan.</p><button class="link" style="border:0;background:none;padding:0;cursor:pointer" onclick="openModal()">Kirim masukan →</button></div>
+<div class="card"><div class="card-icon">🏛️</div><h3>Arsip dan Muatan Lokal</h3><p>Kenali dokumentasi, sejarah, dan informasi lokal Kabupaten Pesisir Selatan.</p><a class="link" href="#koleksi">Jelajahi →</a></div>
+</div></section>
+<section class="section" id="katalog"><div class="searchbox"><div><h2>Temukan bahan bacaan</h2><p>Ketik judul, penulis, atau topik untuk mencoba pencarian katalog contoh.</p></div><form class="search-form" id="searchForm"><input id="searchInput" placeholder="Contoh: budaya Minangkabau" aria-label="Cari koleksi"><button class="btn">Cari</button></form><div id="searchResult" class="result" style="grid-column:1/-1;color:#f6d58f"></div></div></section>
+<section class="section" id="koleksi"><div class="section-head"><div><h2>Ruang Koleksi Digital</h2><p>Contoh kategori koleksi yang dapat diisi dengan katalog dan tautan e-book resmi.</p></div></div>
+<div class="books">
+<div class="book"><div class="cover">Budaya<br>Minangkabau</div><div class="book-info"><b>Budaya dan Kearifan Lokal</b><small>Kategori: Muatan lokal</small></div></div>
+<div class="book"><div class="cover">Sejarah<br>Pesisir</div><div class="book-info"><b>Sejarah Pesisir Selatan</b><small>Kategori: Sejarah daerah</small></div></div>
+<div class="book"><div class="cover">Literasi<br>Masyarakat</div><div class="book-info"><b>Pendidikan dan Literasi</b><small>Kategori: Pendidikan</small></div></div>
+<div class="book"><div class="cover">Kearsipan<br>Daerah</div><div class="book-info"><b>Informasi Kearsipan</b><small>Kategori: Arsip</small></div></div>
+</div></section>
+<section class="section" id="agenda"><div class="section-head"><div><h2>Agenda & Pengumuman</h2><p>Informasi kegiatan perpustakaan.</p></div></div><div class="grid"><div class="card"><h3>Program Literasi</h3><p>Pantau informasi program membaca dan kegiatan literasi yang diumumkan oleh perpustakaan.</p></div><div class="card"><h3>Kunjungan Perpustakaan</h3><p>Informasi layanan kunjungan sekolah, komunitas, dan masyarakat dapat ditambahkan di bagian ini.</p></div><div class="card"><h3>Informasi Layanan</h3><p>Perubahan jadwal, layanan, dan pengumuman resmi akan ditampilkan pada halaman ini.</p></div></div></section>
+<section class="section" id="panduan"><div class="section-head"><div><h2>Panduan Pemustaka</h2><p>Langkah sederhana menggunakan layanan perpustakaan.</p></div></div><div class="card"><ol><li>Pilih menu pencarian katalog untuk menelusuri koleksi.</li><li>Catat judul dan informasi koleksi yang dibutuhkan.</li><li>Hubungi petugas perpustakaan untuk memastikan ketersediaan koleksi dan prosedur peminjaman.</li><li>Gunakan koleksi dengan tertib serta cantumkan sumber saat mengutip informasi.</li></ol></div></section>
+<section class="section" id="kontak"><div class="section-head"><div><h2>Kontak Perpustakaan</h2><p>Hubungi pengelola untuk informasi lebih lanjut.</p></div></div><div class="grid"><div class="card"><div class="card-icon">📍</div><h3>Alamat</h3><p>Jl. Imam Bonjol, Painan, Kecamatan IV Jurai, Kabupaten Pesisir Selatan, Sumatera Barat 25651.</p></div><div class="card"><div class="card-icon">☎️</div><h3>Telepon / Email</h3><p>(0756) 21508 arsippustaka.pessel@gmail.com.</p></div><div class="card"><div class="card-icon">🌐</div><h3>Media Sosial</h3><p>@Kominfopesisirselatan.</p></div></div></section>
+</main>
+<footer><div class="foot"><div><h3>Perpustakaan Digital Pesisir Selatan</h3><p>Dinas Kearsipan dan Perputakaan Kabupaten Pesisir Selatan. Portal informasi dan literasi masyarakat.</p></div><div><h3>Navigasi</h3><a href="#profil">Profil</a><a href="#layanan">Layanan</a><a href="#koleksi">Koleksi Digital</a></div><div><h3>Informasi</h3><a href="#panduan">Panduan Pemustaka</a><a href="#agenda">Agenda</a><a href="#kontak">Kontak</a></div></div></footer>
+<div class="modal" id="feedbackModal"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><h2>Saran dan Usulan</h2><p style="font-size:13px;color:#687386">Formulir contoh. Saat ini belum terhubung ke database atau email instansi.</p><form id="feedbackForm"><label>Nama</label><input required placeholder="Nama kamu"><label>Masukan</label><textarea required placeholder="Tuliskan saran atau usulan..."></textarea><button class="btn" style="margin-top:12px">Kirim contoh</button><div id="feedbackResult" class="result"></div></form></div></div>
+<script>
+const nav=document.getElementById('nav');document.getElementById('menuBtn').onclick=()=>nav.classList.toggle('open');
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const sample=[['Budaya Minangkabau','Muatan lokal'],['Sejarah Pesisir Selatan','Sejarah daerah'],['Pendidikan dan Literasi','Pendidikan'],['Informasi Kearsipan','Arsip']];
+document.getElementById('searchForm').addEventListener('submit',e=>{e.preventDefault();let q=document.getElementById('searchInput').value.trim().toLowerCase();let found=sample.filter(x=>x.join(' ').toLowerCase().includes(q));document.getElementById('searchResult').textContent=!q?'Masukkan kata kunci pencarian.':found.length?'Contoh hasil: '+found.map(x=>x[0]+' ('+x[1]+')').join(' • '):'Belum ada contoh koleksi yang cocok. Coba kata kunci lain.'});
+function openModal(){document.getElementById('feedbackModal').classList.add('show')}function closeModal(){document.getElementById('feedbackModal').classList.remove('show')}
+document.getElementById('feedbackForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('feedbackResult').textContent='Terima kasih. Ini hanya simulasi formulir; belum ada data yang dikirim.';});
+</script>
+</body></html>
